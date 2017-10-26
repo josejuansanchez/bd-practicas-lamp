@@ -15,7 +15,7 @@ CREATE TABLE alumno (
   id INTEGER UNSIGNED AUTO_INCREMENT PRIMARY KEY,
   nombre VARCHAR(50) NOT NULL,
   apellido1 VARCHAR(50) NOT NULL,
-  apellido2 VARCHAR(50) DEFAULT NULL,
+  apellido2 VARCHAR(50),
   candidato ENUM('sí','no') NOT NULL DEFAULT 'sí',
   vota_a INTEGER UNSIGNED,
   fecha_hora_voto DATETIME,
