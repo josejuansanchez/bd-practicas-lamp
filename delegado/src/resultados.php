@@ -3,7 +3,7 @@
 include_once("config.php");
 
 // Obtenemos el recuento de votos
-$query = "SELECT a.vota_a, count(*) as votos, b.nombre, b.apellido1, b.apellido2 ";
+$query = "SELECT a.vota_a, count(*) as votos, b.nombre, b.apellido1, b.apellido2, b.imagen_perfil ";
 $query .= "FROM alumno a, alumno b ";
 $query .= "WHERE a.vota_a > 0 AND a.vota_a = b.id ";
 $query .= "GROUP BY a.vota_a ";
@@ -31,7 +31,7 @@ $result = mysqli_query($mysqli, $query);
     <div class="jumbotron jumbotron-fluid">
       <div class="container">
         <h1 class="display-4">Sistema de elección de delegado</h1>
-        <p class="lead">IES Celia Viñas (Almería) - Curso 2017 / 2018</p>
+        <p class="lead">IES Celia Viñas (Almería) - Curso 2020 / 2021</p>
       </div>      
     </div>
 
@@ -58,12 +58,12 @@ $result = mysqli_query($mysqli, $query);
     <?php
     while($res = mysqli_fetch_array($result)) {
       echo "<tr>";
-      echo "<td><img src=\"img/profile.png\"></td>";
+      echo "<td><img src=\"img/".$res['imagen_perfil']."\"></td>";
       echo "<td>".$res['vota_a']."</td>";
-      echo "<td>".utf8_encode($res['nombre'])."</td>";
-      echo "<td>".utf8_encode($res['apellido1'])."</td>";
-      echo "<td>".utf8_encode($res['apellido2'])."</td>";
-      echo "<td>".utf8_encode($res['votos'])."</td>";
+      echo "<td>".$res['nombre']."</td>";
+      echo "<td>".$res['apellido1']."</td>";
+      echo "<td>".$res['apellido2']."</td>";
+      echo "<td>".$res['votos']."</td>";
       echo "</tr>";
     }
     mysqli_close($msqli);

@@ -1,6 +1,6 @@
 # bd-practicas-lamp
 
->IES Celia Viñas (Almería) - Curso 2017/2018  
+>IES Celia Viñas (Almería) - Curso 2020/2021  
 >Módulo: BD - Bases de Datos  
 >Ciclo: CFGS Desarrollo de Aplicaciones Web  
 
@@ -47,6 +47,7 @@ CREATE TABLE alumno (
   apellido1 VARCHAR(50) NOT NULL,
   apellido2 VARCHAR(50),
   candidato ENUM('sí','no') NOT NULL DEFAULT 'sí',
+  imagen_perfil VARCHAR(512) NOT NULL,
   vota_a INTEGER UNSIGNED,
   fecha_hora_voto DATETIME,
   ip VARCHAR(15),

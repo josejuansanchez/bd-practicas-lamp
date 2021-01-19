@@ -1,10 +1,10 @@
 <?php
 
-define('DB_HOST', 'localhost');
-define('DB_NAME', 'delegado');
-define('DB_USER', 'root');
-define('DB_PASSWORD', 'root');
+define('MYSQL_HOST', 'mysql');
+define('MYSQL_DATABASE', 'delegado');
+define('MYSQL_USER', 'db_user');
+define('MYSQL_PASSWORD', 'db_password');
 
-$mysqli = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+$mysqli = mysqli_connect(MYSQL_HOST, MYSQL_USER, MYSQL_PASSWORD, MYSQL_DATABASE);
 
 ?>

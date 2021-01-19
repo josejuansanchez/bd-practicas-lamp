@@ -21,7 +21,7 @@ include_once("config.php");
     <div class="jumbotron jumbotron-fluid">
       <div class="container">
         <h1 class="display-4">Sistema de elección de delegado</h1>
-        <p class="lead">IES Celia Viñas (Almería) - Curso 2017 / 2018</p>
+        <p class="lead">IES Celia Viñas (Almería) - Curso 2020 / 2021</p>
       </div>
     </div>
 

@@ -24,7 +24,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM alumno ORDER BY apellido1,apellid
     <div class="jumbotron jumbotron-fluid">
       <div class="container">
         <h1 class="display-4">Sistema de elección de delegado</h1>
-        <p class="lead">IES Celia Viñas (Almería) - Curso 2017 / 2018</p>
+        <p class="lead">IES Celia Viñas (Almería) - Curso 2020 / 2021</p>
       </div>      
     </div>
 
@@ -52,12 +52,12 @@ $result = mysqli_query($mysqli, "SELECT * FROM alumno ORDER BY apellido1,apellid
     <?php
     while($res = mysqli_fetch_array($result)) {
       echo "<tr>";
-      echo "<td><img src=\"img/profile.png\"></td>";
+      echo "<td><img src=\"img/".$res['imagen_perfil']."\"></td>";
       echo "<td>".$res['id']."</td>";
-      echo "<td>".utf8_encode($res['nombre'])."</td>";
-      echo "<td>".utf8_encode($res['apellido1'])."</td>";
-      echo "<td>".utf8_encode($res['apellido2'])."</td>";
-      echo "<td>".utf8_encode($res['candidato'])."</td>";
+      echo "<td>".$res['nombre']."</td>";
+      echo "<td>".$res['apellido1']."</td>";
+      echo "<td>".$res['apellido2']."</td>";
+      echo "<td>".$res['candidato']."</td>";
 
       // Sólo mostramos el botón de Login si el usuario no ha votado todavía
       if (empty($res[vota_a])) {
